@@ -41,27 +41,31 @@ def is_lucky(number):
     second_sum = int(digits[3]) + int(digits[4]) + int(digits[5])
     return first_sum == second_sum
 
-
-
 print("Завдання 1")
 show_quote()
 
 print("\nЗавдання 2")
-show_odd_numbers(3, 15)
+a = int(input("Введіть перше число: "))
+b = int(input("Введіть друге число: "))
+show_odd_numbers(a, b)
 
 print("\nЗавдання 3")
-draw_line(10, "horizontal", "*")
-
-print("\nЗавдання 3")
-draw_line(5, "vertical", "#")
+length = int(input("Введіть довжину лінії: "))
+direction = input("Введіть напрямок (horizontal/vertical): ")
+symbol = input("Введіть символ: ")
+draw_line(length, direction, symbol)
 
 print("\nЗавдання 4")
-print(max_of_four(3, 17, 8, 5))
+a = int(input("Введіть перше число: "))
+b = int(input("Введіть друге число: "))
+c = int(input("Введіть третє число: "))
+d = int(input("Введіть четверте число: "))
+print("Максимальне число:", max_of_four(a, b, c, d))
 
 print("\nЗавдання 5")
-print(is_prime(7))
-print(is_prime(10))
+number = int(input("Введіть число: "))
+print("Просте число?", is_prime(number))
 
 print("\nЗавдання 6")
-print(is_lucky(123420))
-print(is_lucky(723422))
+number = int(input("Введіть шестизначне число: "))
+print("Щасливе число?", is_lucky(number))
